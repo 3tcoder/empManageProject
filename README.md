@@ -1,0 +1,2 @@
+# empManageProject
+基于springboot、maven和mybatis构建的员工部门管理系统
