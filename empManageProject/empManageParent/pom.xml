@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.1.4</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+  <groupId>org.example</groupId>
+  <artifactId>empManageParent</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>empManageParent</name>
+  <url>http://maven.apache.org</url>
+
+  <modules>
+    <module>../empManage</module>
+    <module>../empManagePojo</module>
+    <module>../empManageUtils</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <lombok.version>1.18.30</lombok.version>
+    <spring-boot-starter-web.version>2.7.14</spring-boot-starter-web.version>
+    <aliyun-sdk-oss.version>3.15.1</aliyun-sdk-oss.version>
+  </properties>
+
+  <dependencies>
+    <!-- Project Lombok: Library for simplifying Java code by generating getter, setter, and other methods. -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+      <version>${lombok.version}</version>
+    </dependency>
+  </dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <!-- Spring Boot Web Starter: Starter for building web, including RESTful, applications using Spring MVC. -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>${spring-boot-starter-web.version}</version>
+      </dependency>
+      <!-- Alibaba Cloud OSS SDK: SDK for integrating with Alibaba Cloud Object Storage Service (OSS). -->
+      <dependency>
+        <groupId>com.aliyun.oss</groupId>
+        <artifactId>aliyun-sdk-oss</artifactId>
+        <version>${aliyun-sdk-oss.version}</version>
+      </dependency>
+
+      <!-- Java Architecture for XML Binding (JAXB) API: API for reading and writing XML data. -->
+      <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>2.3.1</version>
+      </dependency>
+
+      <!-- JavaBeans Activation Framework (JAF): Framework for handling data in JavaBeans-style. -->
+      <dependency>
+        <groupId>javax.activation</groupId>
+        <artifactId>activation</artifactId>
+        <version>1.1.1</version>
+      </dependency>
+
+      <!-- JAXB Runtime: Implementation of Java Architecture for XML Binding (JAXB) API. -->
+      <dependency>
+        <groupId>org.glassfish.jaxb</groupId>
+        <artifactId>jaxb-runtime</artifactId>
+        <version>2.3.3</version>
+      </dependency>
+
+      <!-- JSON Web Token (JWT): Library for working with JSON Web Tokens. -->
+      <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>0.9.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.example</groupId>
+        <artifactId>empManagePojo</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

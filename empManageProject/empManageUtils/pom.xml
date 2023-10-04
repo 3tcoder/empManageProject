@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.example</groupId>
+    <artifactId>empManageParent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath>../empManageParent/pom.xml</relativePath>
+  </parent>
+
+  <artifactId>empManageUtils</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>empManageUtils</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <!-- Spring Boot Web Starter: Starter for building web, including RESTful, applications using Spring MVC. -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <!-- Alibaba Cloud OSS SDK: SDK for integrating with Alibaba Cloud Object Storage Service (OSS). -->
+    <dependency>
+      <groupId>com.aliyun.oss</groupId>
+      <artifactId>aliyun-sdk-oss</artifactId>
+    </dependency>
+
+    <!-- Java Architecture for XML Binding (JAXB) API: API for reading and writing XML data. -->
+    <dependency>
+      <groupId>javax.xml.bind</groupId>
+      <artifactId>jaxb-api</artifactId>
+    </dependency>
+
+    <!-- JavaBeans Activation Framework (JAF): Framework for handling data in JavaBeans-style. -->
+    <dependency>
+      <groupId>javax.activation</groupId>
+      <artifactId>activation</artifactId>
+    </dependency>
+
+    <!-- JAXB Runtime: Implementation of Java Architecture for XML Binding (JAXB) API. -->
+    <dependency>
+      <groupId>org.glassfish.jaxb</groupId>
+      <artifactId>jaxb-runtime</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.jsonwebtoken</groupId>
+      <artifactId>jjwt</artifactId>
+      <version>0.9.1</version>
+    </dependency>
+
+    <!-- JSON Web Token (JWT): Library for working with JSON Web Tokens. -->
+    <dependency>
+      <groupId>org.example</groupId>
+      <artifactId>empManagePojo</artifactId>
+    </dependency>
+  </dependencies>
+</project>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.practice.empmanage.mapper.EmpMapper">
+    <select id="list" resultType="com.practice.empmanage.pojo.Emp">
+        select * from emp
+        <where>
+            <if test="name != null  and name != ''">
+                name like concat('%', #{name}, '%')
+            </if>
+            <if test="gender != null">
+                and gender = #{gender}
+            </if>
+            <if test="begin != null and end != null">
+                and entrydate between #{begin} and #{end}
+            </if>
+        </where>
+        order by update_time desc
+        limit #{start}, #{pageSize}
+    </select>
+
+    <delete id="delete">
+        delete from emp where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <insert id="insert">
+        insert into emp (username, name, gender, image, job,
+                         entrydate, dept_id, create_time, update_time)
+        values (#{username}, #{name}, #{gender}, #{image}, #{job}, #{entrydate}, #{deptId}, #{createTime},
+                #{updateTime})
+    </insert>
+
+    <update id="update">
+        update emp
+        <set>
+            username = #{username}, name = #{name}, gender = #{gender}
+            <if test="#{image} != null">
+                ,image = #{image}
+            </if>
+            <if test="deptId != null">
+                ,dept_id = #{deptId}
+            </if>
+            <if test="job != null">
+                ,job = #{job}
+            </if>
+            <if test="entrydate != null">
+                ,entrydate = #{entrydate}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+</mapper>

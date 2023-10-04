@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/empManage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/empManageParent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/empManageParent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/empManagePojo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/empManageUtils/src/main/java" charset="UTF-8" />
+  </component>
+</project>

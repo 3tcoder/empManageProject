@@ -1,0 +1,26 @@
+spring:
+  # MySQL
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis
+    username: root
+    password: wusiyu1212629
+  # 配置单个请求最大上传大小 (一次请求可以上传多个文件)
+  servlet:
+    multipart:
+      max-request-size: 100MB
+
+# MyBatis
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+
+# 自定义的阿里云OSS配置信息
+aliyun:
+  oss:
+    endpoint: https://oss-cn-beijing.aliyuncs.com
+    accessKeyId: LTAI5tDS6jL72U27wPYd5Z2r
+    accessKeySecret: Pv9DwJfJniBVLNyoV6VcOSgMGrSf5R
+    bucketName: emp-manage
